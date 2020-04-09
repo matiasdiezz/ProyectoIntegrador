@@ -132,12 +132,26 @@ body {
   background-color: rgba(255, 235, 59, 0.938);
   border-radius: 5px;
 }
-
+/*Diseño */
 .banner-main p {
-  font-size: medium;
+  font-size: 19px;
   position: fixed;
-  top: 2px;
+  top: -10px;
+  font-family: "Ropa Sans", sans-serif;
+  font-weight: 900;
+  font-style: oblique;
+  
 }
+ 
+.banner-main i {
+  color:black;
+  box-shadow: black 32px;
+  border-radius: 80%;
+  text-align: center;
+
+}
+
+
 
 /*Fav*/
 
