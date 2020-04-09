@@ -1,0 +1,87 @@
+body {
+  background-image: url(/images/matblack.jpg);
+  display: flex;
+  justify-content: center;
+}
+* {
+  box-sizing: border-box;
+}
+.super {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.libreria {
+  display: flex;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  /*
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+    */
+}
+.libreria::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.libreria::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+.libreria::-webkit-scrollbar-track {
+  background: transparent;
+}
+.libreria > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 100%;
+  height: 500px;
+  margin-right: 50px;
+  border-radius: 10px;
+  background: #eee;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+
+.author-info {
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+}
+.author-info a {
+  color: white;
+}
+
+.super > a {
+  display: inline-flex;
+  background: transparent;
+  text-decoration: none;
+  align-items: left;
+  justify-content: left;
+  position: relative;
+}
+.super > a:active {
+  top: 1px;
+}
+.super > a:focus {
+  background: #000;
+}
