@@ -3,6 +3,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: left;
+  font-family: sans-serif;
 }
 * {
   box-sizing: border-box;
