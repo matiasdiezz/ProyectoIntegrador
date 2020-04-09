@@ -7,6 +7,7 @@ body {
   font-family: "Ropa Sans", sans-serif;
   flex-wrap: wrap;
 }
+
 /*Configuración*/
 
 .perfil {
@@ -130,6 +131,12 @@ body {
 .banner-main:hover {
   background-color: rgba(255, 235, 59, 0.938);
   border-radius: 5px;
+}
+
+.banner-main p {
+  font-size: medium;
+  position: fixed;
+  top: 2px;
 }
 
 /*Fav*/
