@@ -1,8 +1,35 @@
 body {
   background-image: url(/images/matblack.jpg);
   background-size: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Ropa Sans", sans-serif;
+  flex-wrap: wrap;
+}
+/*Configuración*/
+
+.perfil {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 235, 59, 0.801);
+  right: 30px;
+  top: 20px;
+}
+.settings i {
+  color: rgba(255, 235, 59, 0.801);
+  position: fixed;
+  left: 30px;
+  top: 37px;
 }
 
+/*Nav bar*/
+
+.titulobanner {
+  color: white;
+}
 .nav-bar {
   width: 100%;
   height: 6.3vh;
@@ -13,14 +40,12 @@ body {
   bottom: 0;
   left: 0;
 }
-
 .nav-bar ul {
   list-style-type: none;
   margin: 0px;
   padding: 0px;
   overflow: hidden;
 }
-
 .nav-bar li {
   background-color: rgba(0, 0, 0, 0.781);
   float: left;
@@ -29,7 +54,6 @@ body {
   border-radius: 5px;
   border-right: 1px rgba(255, 255, 255, 0.644) solid;
 }
-
 .nav-bar li a {
   display: block;
   color: white;
@@ -38,19 +62,14 @@ body {
   text-decoration: none;
   height: inherit;
 }
-
 .nav-bar li a:hover {
   background-color: rgba(255, 235, 59, 0.938);
   height: inherit;
   border-radius: 5px;
 }
 
-.Descripcion {
-  color: white;
-  font-size: 18px;
-  font-weight: bolder;
-  font-family: "Open Sans", sans-serif;
-}
+/*carousel*/
+
 .container {
   width: 95%;
   display: flex;
@@ -65,8 +84,8 @@ body {
   height: 10px;
 }
 .container::-webkit-scrollbar-thumb {
-  background: black;
   border-radius: 10px;
+  background: black;
 }
 .container::-webkit-scrollbar-track {
   background: transparent;
@@ -88,7 +107,6 @@ body {
 .slides > div:target {
   /*   transform: scale(0.8); */
 }
-
 .container > a {
   display: inline-flex;
   width: 1.5rem;
@@ -106,32 +124,37 @@ body {
 }
 .banner-main {
   height: 23vh;
-  width: 370px;
+  width: 100%;
   background-color: rgba(255, 235, 59, 0.801);
   border-radius: 5px;
 }
-
 .banner-main:hover {
   background-color: rgba(255, 235, 59, 0.938);
   border-radius: 5px;
 }
 
-.banner-main img {
-  height: 80%;
-  border-radius: 5px;
-  padding: 2.3vh;
-  float: left;
+/*Fav*/
+
+.favtitulo {
+  color: white;
 }
 
-.banner-main .banner-text {
-  font-family: sans-serif;
-  color: black;
-  font-weight: bolder;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
+.favcontainer {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.banner-text a {
-  text-decoration: none;
-  color: black;
+.mas-escuchado {
+  height: 50%;
+  width: 40%;
+  background-color: rgba(255, 235, 59, 0.801);
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+.mas-escuchado:hover {
+  background-color: rgba(255, 235, 59, 0.938);
 }

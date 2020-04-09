@@ -15,6 +15,13 @@
     <link rel="stylesheet" href="/css/Styles.css" />
   </head>
   <body>
+    <div class="configuracion">
+      <div class="perfil">
+        <img src="" alt="" />
+      </div>
+      <a href="google.com" class="settings"><i class="fas fa-cog"></i></a>
+    </div>
+    <h2 class="titulobanner">Secciones</h2>
     <div class="nav-bar">
       <nav>
         <ul>
@@ -25,43 +32,27 @@
             <a href="#contact"><i class="fas fa-search"></i></a>
           </li>
           <li>
-            <a href="#home"><i class="fas fa-home"></i> </a>
+            <a href="#home"><i class="fas fa-home"></i></a>
           </li>
         </ul>
       </nav>
     </div>
 
     <div class="container">
-      <div class="banner-main">
-        <img src="/images/imagine-dragons.jpg" alt="" />
-        <div class="banner-text">
-          <h1 id="ultimo-escuchado"><a href=""> </a></h1>
-          <p id="Nombre"></p>
-        </div>
-      </div>
-      <div class="banner-main">
-        <img src="/images/imagine-dragons.jpg" alt="" />
-        <p class="banner-text"></p>
-      </div>
-      <div class="banner-main">
-        <img src="/images/imagine-dragons.jpg" alt="" />
-        <p class="banner-text"></p>
-      </div>
-      <div class="banner-main">
-        <img src="/images/imagine-dragons.jpg" alt="" />
-        <p class="banner-text"></p>
-      </div>
-      <p class="Descripcion"></p>
-      <div class="banner-main">
-        <img src="/images/imagine-dragons.jpg" alt="" />
-        <p class="banner-text"></p>
-      </div>
-      <p class="Descripcion"></p>
-      <div class="banner-main">
-        <img src="/images/imagine-dragons.jpg" alt="" />
-        <p class="banner-text"></p>
-      </div>
-      <p class="Descripcion"></p>
+      <div class="banner-main" id="Tracks"></div>
+      <div class="banner-main" id="Albums"></div>
+      <div class="banner-main" id="Artist"></div>
+      <div class="banner-main" id="Playlist"></div>
+      <div class="banner-main" id="Podcast"></div>
+    </div>
+
+    <br />
+    <h2 class="favtitulo">Lo más escuchado</h2>
+    <div class="favcontainer">
+      <div class="mas-escuchado" id="FavTrack"></div>
+      <div class="mas-escuchado" id="FavAlbum"></div>
+      <div class="mas-escuchado" id="FavArtist"></div>
+      <div class="mas-escuchado" id="FavPlaylist"></div>
     </div>
   </body>
 </html>
