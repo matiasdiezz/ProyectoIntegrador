@@ -172,11 +172,10 @@ body {
 .mas-escuchado:hover {
   background-color: rgba(255, 235, 59, 0.938);
 }
- 
-.mas-escuchado p{
+
+.mas-escuchado p {
   font-size: 17px;
   display: fixed;
   text-align: center;
   font-weight: bolder;
-  
 }
