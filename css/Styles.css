@@ -21,7 +21,7 @@ body {
 }
 
 .settings i {
-  color: rgba(255, 235, 59, 0.801);
+  color: red;
   position: fixed;
   left: 30px;
   top: 32px;
