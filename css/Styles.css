@@ -82,7 +82,7 @@ body {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
-.container p{
+.container p {
   text-decoration: none;
   color: black;
 }
