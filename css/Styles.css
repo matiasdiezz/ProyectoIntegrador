@@ -82,6 +82,11 @@ body {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
+.container p{
+  text-decoration: none;
+  color: black;
+}
+
 .container::-webkit-scrollbar {
   width: 10px;
   height: 10px;
