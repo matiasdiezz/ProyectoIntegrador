@@ -9,11 +9,16 @@ body {
 }
 
 /*Configuración*/
-.logo {
-  width: 10vw;
+.header {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: rgb(211, 188, 58);
+  margin: -5px;
 }
-.titulobanner {
-  color: white;
+.header .logo {
+  width: 10vw;
 }
 
 /*Nav bar*/
@@ -123,13 +128,13 @@ body {
   font-family: "Ropa Sans", sans-serif;
   font-weight: 900;
   font-style: oblique;
+  left: 40%;
 }
 
 .banner-main i {
   color: black;
   box-shadow: black 32px;
-  border-radius: 80%;
-  text-align: center;
+  margin-top: 4vh;
 }
 
 /*Playlist*/
