@@ -48,7 +48,9 @@ body {
   border: grey solid 2px;
   border-radius: 5px;
   padding-bottom: 35px;
+  margin: auto;
 }
+
 .dow {
   color: whitesmoke;
   font-size: 25px;
@@ -56,7 +58,7 @@ body {
 /* header */
 .album-header {
   width: 95%;
-  height: 200px;
+  height: 20vh;
   display: flex;
   margin: auto;
   padding: 10px;
@@ -64,16 +66,16 @@ body {
 
 .album-header .imagen {
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  text-align: right;
 }
 
 .imagen img {
-  width: 20%;
+  width: 80%;
   margin: auto;
 }
 
-.album-header h2 {
+.album-header .titulos {
+  margin-left: 2vw;
   width: 100%;
   color: rgb(226, 212, 194);
 }
@@ -100,12 +102,21 @@ body {
   border: rgba(255, 255, 255, 0.644) solid 3px;
   list-style: none;
   width: 100%;
-  height: 50px;
-  margin-top: 20px;
+  height: 3vh;
+  margin-top: 1vh;
   font-weight: bolder;
 }
 
 .list li:hover {
   background-color: rgba(128, 128, 128, 0.5);
   color: whitesmoke;
+}
+
+@media (min-width: 700px) {
+  .album-header {
+    height: 38vh;
+  }
+  .imagen img {
+    width: 20vw;
+  }
 }
