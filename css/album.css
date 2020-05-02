@@ -70,7 +70,11 @@ body {
 }
 
 .imagen img {
+<<<<<<< HEAD
   width: 80%;
+=======
+  width: 35%;
+>>>>>>> db40e0708b969d3231feae58ca9fbea369ea449a
   margin: auto;
 }
 
