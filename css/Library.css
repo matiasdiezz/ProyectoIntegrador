@@ -1,5 +1,5 @@
 body {
-  background-image: url(/images/matblack.jpg);
+  background-image: url(../images/matblack.jpg);
   display: flex;
   justify-content: center;
   align-items: left;

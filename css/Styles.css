@@ -1,5 +1,5 @@
 body {
-  background-image: url(/images/matblack.jpg);
+  background-image: url(../images/matblack.jpg);
   background-size: 200%;
   display: flex;
   align-items: center;
