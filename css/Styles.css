@@ -1,65 +1,3 @@
-body {
-  background-image: url(../images/matblack.jpg);
-  background-size: 200%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Ropa Sans", sans-serif;
-  flex-wrap: wrap;
-}
-
-/*Configuración*/
-.header {
-  width: 100%;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  color: rgb(211, 188, 58);
-  margin: -5px;
-}
-.header .logo {
-  width: 10vw;
-}
-
-/*Nav bar*/
-
-.nav-bar {
-  width: 100%;
-  height: 6.3vh;
-  border-radius: 5px;
-  align-items: center;
-  position: fixed;
-  padding-left: auto;
-  bottom: 0;
-  left: 0;
-}
-.nav-bar ul {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px;
-  overflow: hidden;
-}
-.nav-bar li {
-  background-color: rgba(0, 0, 0, 0.781);
-  float: left;
-  width: 33%;
-  height: inherit;
-  border-radius: 5px;
-  border-right: 1px rgba(255, 255, 255, 0.644) solid;
-}
-.nav-bar li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  height: inherit;
-}
-.nav-bar li a:hover {
-  background-color: rgba(255, 235, 59, 0.938);
-  height: inherit;
-  border-radius: 5px;
-}
-
 /*carrusel*/
 
 .container {
@@ -170,23 +108,4 @@ body {
   border-radius: 5px;
   background-color: rgba(255, 235, 59, 0.801);
   height: 40vh;
-}
-footer {
-  width: 95%;
-  background-color: rgba(255, 235, 59, 0.438);
-  margin-bottom: 5vh;
-  border-radius: 5px;
-  display: flex;
-}
-footer .deezer-logo {
-  width: 30vw;
-  height: 10vh;
-}
-
-footer p {
-  width: 50%;
-  color: black;
-  font-size: 15px;
-  font-weight: bolder;
-  padding-left: 2vw;
 }
