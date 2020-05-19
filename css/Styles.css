@@ -1,111 +1,110 @@
-/*carrusel*/
+* {
+  box-sizing: border-box;
+}
 
+/* Position the image container (needed to position the left and right arrows) */
 .container {
-  width: 95%;
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  border-radius: 5px;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
-.container p {
-  text-decoration: none;
-  color: black;
-  text-align: center;
-}
-
-.container::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-.container::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: black;
-}
-.container::-webkit-scrollbar-track {
-  background: transparent;
-}
-.container > div {
-  scroll-snap-align: start;
-  flex-shrink: 0;
-  margin-right: 50px;
-  transform-origin: center center;
-  transform: scale(1);
-  transition: transform 0.5s;
   position: relative;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 100px;
 }
 
-.container > a {
-  width: 1.5rem;
-  height: 1.5rem;
-  background: white;
-  text-decoration: none;
+/* Hide the images by default */
+#Off {
+  display: none;
 }
 
-.banner-main {
-  height: 23vh;
-  width: 100%;
-  background-color: rgba(255, 235, 59, 0.801);
-  border-radius: 5px;
-}
-.banner-main:hover {
-  background-color: rgba(255, 235, 59, 0.938);
-  border-radius: 5px;
-}
-/*Diseño */
-.banner-main p {
-  font-size: 19px;
-  position: fixed;
-  top: -10px;
-  font-family: "Ropa Sans", sans-serif;
-  font-weight: 900;
-  font-style: oblique;
-  left: 40%;
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
 }
 
-.banner-main i {
-  color: black;
-  box-shadow: black 32px;
-  margin-top: 4vh;
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-/*Playlist*/
-
-.playlist-main {
-  width: 95%;
-  display: grid;
-  height: fit-content;
-  border-radius: 5px;
-  border: grey 2px solid;
-  padding-bottom: 3vh;
-  margin-bottom: 2vh;
+/* Position the "next button" to the right */
+.next {
+  right: 2%;
+  border-radius: 3px 0 0 3px;
 }
 
-.titulo-playlist {
-  padding: 5%;
-  column-count: 2;
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Container for image text */
+.caption-container {
   text-align: center;
+  background-color: #222;
+
+  color: white;
 }
 
-.titulo-playlist img {
-  border-radius: 5px;
-  width: 70%;
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
-.titulo-playlist h2 {
+
+/* Six columns side by side */
+.row {
   width: 100%;
-  text-align: left;
+  margin: auto;
 }
-
-.playlist-music {
-  width: 90%;
+.column {
+  float: left;
+  width: 33%;
   margin: auto;
   border-radius: 5px;
-  background-color: rgba(255, 235, 59, 0.801);
-  height: 40vh;
+  border: grey solid 1px;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  background-color: rgba(255, 238, 0, 0.623);
+}
+
+.Chart {
+  height: fit-content;
+  width: 100%;
+  background-color: rgba(255, 238, 0, 0.671);
+  border-radius: 10px;
+  padding-left: 5vw;
+}
+
+.Chart .Item-lista {
+  width: 90%;
+  height: 50px;
+  padding-top: 2vh;
+  border-top: 1px solid black;
+  color: grey;
+}
+.Item-lista:hover {
+  background-color: rgba(128, 128, 128, 0.226);
+}
+a .Item-lista {
+  text-decoration: none;
+}
+
+.Item-lista span {
+  color: #050505;
 }

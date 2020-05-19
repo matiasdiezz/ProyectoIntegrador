@@ -62,6 +62,7 @@ footer {
   margin-bottom: 5vh;
   border-radius: 5px;
   display: flex;
+  margin-top: 100%;
 }
 footer .deezer-logo {
   width: 30vw;
