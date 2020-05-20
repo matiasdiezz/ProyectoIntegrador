@@ -55,24 +55,7 @@ body {
   width: 10vw;
 }
 /* Footer */
-
-footer {
-  width: 100%;
-  background-color: rgba(255, 235, 59, 0.438);
-  margin-bottom: 5vh;
-  border-radius: 5px;
-  display: flex;
-  margin-top: 100%;
-}
-footer .deezer-logo {
-  width: 30vw;
-  height: 10vh;
-}
-
-footer p {
-  width: 50%;
-  color: black;
-  font-size: 15px;
-  font-weight: bolder;
-  padding-left: 2vw;
+footer .col-1 .Imagenn {
+  height: 100px;
+  width: 200px;
 }
