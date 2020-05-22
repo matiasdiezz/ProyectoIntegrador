@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- js -->
-    <script src="JavaScript/Main.js"></script>
     <title>Home</title>
     <!-- Bootstrap CSS -->
     <link
@@ -43,6 +42,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="css/album.css" />
     <link rel="stylesheet" href="css/HeaderFooter.css" />
+    <script src="JavaScript/Album.js"></script>
   </head>
   <body>
     <!-- header -->
@@ -117,74 +117,7 @@
               <th class="text-danger">Top 10 Albums</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td class="d-flex justify-content-between align-items-center">
-                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
-                ><span class="badge badge-danger badge-pill">1</span>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="d-flex justify-content-between align-items-center">
-                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
-                ><span class="badge badge-danger badge-pill">2</span>
-              </td>
-            </tr>
-            <tr>
-              <td class="d-flex justify-content-between align-items-center">
-                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
-                ><span class="badge badge-danger badge-pill">3</span>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="d-flex justify-content-between align-items-center">
-                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
-                ><span class="badge badge-danger badge-pill">4</span>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="d-flex justify-content-between align-items-center">
-                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
-                ><span class="badge badge-danger badge-pill">5</span>
-              </td>
-            </tr>
-            <tr>
-              <td class="d-flex justify-content-between align-items-center">
-                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
-                ><span class="badge badge-danger badge-pill">6</span>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="d-flex justify-content-between align-items-center">
-                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
-                ><span class="badge badge-danger badge-pill">7</span>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="d-flex justify-content-between align-items-center">
-                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
-                ><span class="badge badge-danger badge-pill">8</span>
-              </td>
-            </tr>
-            <tr>
-              <td class="d-flex justify-content-between align-items-center">
-                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
-                ><span class="badge badge-danger badge-pill">9</span>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="d-flex justify-content-between align-items-center">
-                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
-                ><span class="badge badge-danger badge-pill">10</span>
-              </td>
-            </tr>
-          </tbody>
+          <tbody id="listaAlbumes"></tbody>
         </table>
       </div>
       <!-- Detalle del artista -->
