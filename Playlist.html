@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- js -->
     <script src="JavaScript/Main.js"></script>
-    <title>Home</title>
+    <title>Mi Playlist</title>
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -41,10 +41,9 @@
       crossorigin="anonymous"
     ></script>
     <!-- Css -->
-    <link rel="stylesheet" href="css/canciones.css" />
     <link rel="stylesheet" href="css/HeaderFooter.css" />
   </head>
-  <body>
+  <body class="">
     <!-- header -->
     <header
       class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar bg-light m-3 rounded sticky-top"
@@ -107,32 +106,93 @@
         </button>
       </form>
     </header>
-    <!-- Canción -->
-    <div class="text-center">
-      <img
-        src="images/imagine-dragons.jpg"
-        class="rounded img-fluid img-thumbnail bg-warning shadow-lg"
-        style="width: 300px;"
-        alt="Foto del album"
-      />
-      <div class="aling-items-center">
-        <h1 type="button" class="text-black m-3 bg-warning rounded">
-          Nombre de cancion
-        </h1>
-        <h3 type="button" class="text-black m-3 bg-warning rounded">
-          Nombre artista
-        </h3>
-      </div>
-      <div class="col-12 font-weight-bolder" style="font-size: 50px;">
-        <a href=""><i class="fas fa-fast-backward text-warning"></i></a>
-        <a href=""><i class="far fa-play-circle text-warning"></i></a>
-        <a href=""><i class="far fa-pause-circle text-warning"></i></a>
-        <a href=""><i class="fas fa-fast-forward text-warning"></i></a>
+    <!-- PlayList -->
+    <div class="d-flex flex-wrap justify-content-around pt-3 m-3">
+      <div class="col-lg-3 rounded bg-warning pt-3 mt-3">
+        <table class="table table-dark table-striped table-hover">
+          <thead>
+            <tr>
+              <th class="text-warning text-center">Mi Playlist</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="NombreCancion"></a
+                ><span
+                  class="badge badge-warning badge-pill"
+                  id="NumerosCancion"
+                  >1</span
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="NombreCancion"></a
+                ><span class="badge badge-warning badge-pill">2</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="NombreCancion"></a
+                ><span class="badge badge-warning badge-pill">3</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="NombreCancion"></a
+                ><span class="badge badge-warning badge-pill">4</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="NombreCancion"></a
+                ><span class="badge badge-warning badge-pill">5</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="NombreCancion"></a
+                ><span class="badge badge-warning badge-pill">6</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="NombreCancion"></a
+                ><span class="badge badge-warning badge-pill">7</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="NombreCancion"></a
+                ><span class="badge badge-warning badge-pill">8</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="NombreCancion"></a
+                ><span class="badge badge-warning badge-pill">9</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="NombreCancion"></a
+                ><span class="badge badge-warning badge-pill">10</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
     <!-- Footer -->
     <div
-      class="card-footer d-flex bg-light align-items-center m-3 border-warning rounded"
+      class="card-footer d-flex bg-light align-items-center m-3 border border-warning rounded"
     >
       <div>
         <h5 class="text-body">Corradi, Martin, Diez</h5>

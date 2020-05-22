@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/album.css" />
+    <link rel="stylesheet" href="css/HeaderFooter.css" />
+    <script
+      src="https://kit.fontawesome.com/acbb8010fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <header
+      class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar bg-light m-3 rounded sticky-top"
+    >
+      <a class="navbar-brand" href="Index.html"
+        ><img src="images/png-icon.png" alt="DHmusic" style="width: 40px;"
+      /></a>
+      <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+          <li class="nav-item">
+            <a
+              class="nav-link text-body active pr-3"
+              href="Home.html"
+              onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-body pr-3"
+              href="Generos.html"
+              onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');"
+              >Generos</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link text-body"
+              href="Playlist.html"
+              onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');"
+              rel="noopener"
+              >Mi Playlist</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <ul class="navbar-nav flex-row ml-md-auto d-md-flex">
+        <li class="nav-item">
+          <a
+            class="nav-link p-2 text-body"
+            href="https://github.com/matiasdiezz/ProyectoIntegrador"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">
+          Buscar
+        </button>
+      </form>
+    </header>
+    <!-- Container -->
+    <div class="container row d-inline-flex justify-content-center col-12">
+      <!-- Lista de mas escuchados -->
+      <div class="col-4 bg-primary m-3 pt-3 rounded" id="holacomoestas">
+        <table class="table table-dark table-striped table-hover">
+          <thead>
+            <tr>
+              <th class="text-primary">Top 10 Artistas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
+                ><span class="badge badge-primary badge-pill">1</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
+                ><span class="badge badge-primary badge-pill">2</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
+                ><span class="badge badge-primary badge-pill">3</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
+                ><span class="badge badge-primary badge-pill">4</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
+                ><span class="badge badge-primary badge-pill">5</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
+                ><span class="badge badge-primary badge-pill">6</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
+                ><span class="badge badge-primary badge-pill">7</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
+                ><span class="badge badge-primary badge-pill">8</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
+                ><span class="badge badge-primary badge-pill">9</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="d-flex justify-content-between align-items-center">
+                <a href="Cancion.html" class="text-light" id="Chart-Artist"></a
+                ><span class="badge badge-primary badge-pill">10</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Detalle del artista -->
+      <div
+        class="row d-flex p-3 bg-primary m-3 rounded col-lg-7 col-sm-12"
+        id="sepica"
+      >
+        <img
+          src="images/MacMiller.png"
+          class="img-thumbnail m-3"
+          style="height: 200px;"
+          alt=""
+        />
+        <h1 class="m-3">Nombre</h1>
+        <div class="col-12 bg-primary pt-3 rounded">
+          <table class="table table-dark table-striped table-hover">
+            <thead>
+              <tr>
+                <th class="text-primary">Las mejores</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="d-flex justify-content-between align-items-center">
+                  <a
+                    href="Cancion.html"
+                    class="text-light"
+                    id="Chart-Artist"
+                  ></a
+                  ><span class="badge badge-primary badge-pill">1</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="d-flex justify-content-between align-items-center">
+                  <a
+                    href="Cancion.html"
+                    class="text-light"
+                    id="Chart-Artist"
+                  ></a
+                  ><span class="badge badge-primary badge-pill">2</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="d-flex justify-content-between align-items-center">
+                  <a
+                    href="Cancion.html"
+                    class="text-light"
+                    id="Chart-Artist"
+                  ></a
+                  ><span class="badge badge-primary badge-pill">3</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="d-flex justify-content-between align-items-center">
+                  <a
+                    href="Cancion.html"
+                    class="text-light"
+                    id="Chart-Artist"
+                  ></a
+                  ><span class="badge badge-primary badge-pill">4</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="d-flex justify-content-between align-items-center">
+                  <a
+                    href="Cancion.html"
+                    class="text-light"
+                    id="Chart-Artist"
+                  ></a
+                  ><span class="badge badge-primary badge-pill">5</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div
+      class="card-footer d-flex bg-light align-items-center m-3 border-warning rounded"
+    >
+      <div>
+        <h5 class="text-body">Corradi, Martin, Diez</h5>
+      </div>
+      <div class="ml-auto">
+        <img
+          src="images/Webp.net-resizeimage.png"
+          alt=""
+          class="img-fixed float-left"
+        />
+      </div>
+    </div>
+  </body>
+</html>

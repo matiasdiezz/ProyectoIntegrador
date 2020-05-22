@@ -47,7 +47,7 @@
   <body>
     <!-- header -->
     <header
-      class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar bg-light m-3 rounded"
+      class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar bg-light m-3 rounded sticky-top"
     >
       <a class="navbar-brand" href="Index.html"
         ><img src="images/png-icon.png" alt="DHmusic" style="width: 40px;"
@@ -57,7 +57,7 @@
           <li class="nav-item">
             <a
               class="nav-link text-body active pr-3"
-              href="Index.html"
+              href="Home.html"
               onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');"
               >Home</a
             >
@@ -65,7 +65,7 @@
           <li class="nav-item">
             <a
               class="nav-link text-body pr-3"
-              href="Buscar.html"
+              href="Generos.html"
               onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');"
               >Generos</a
             >
@@ -74,11 +74,10 @@
           <li class="nav-item">
             <a
               class="nav-link text-body"
-              href="Library.html"
+              href="Playlist.html"
               onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');"
-              target="_blank"
               rel="noopener"
-              >Libreria</a
+              >Mi Playlist</a
             >
           </li>
         </ul>
@@ -96,6 +95,17 @@
           </a>
         </li>
       </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">
+          Buscar
+        </button>
+      </form>
     </header>
     <!-- Charts -->
     <div class="d-flex flex-wrap justify-content-around pt-3 m-3">
@@ -110,7 +120,8 @@
           <tbody>
             <tr>
               <td class="d-flex justify-content-between align-items-center">
-                <a href="Cancion.html" class="text-light" id="NombreCancion"></a
+                <a href="Cancion.html" class="text-light" id="NombreCancion"
+                  >hola</a
                 ><span
                   class="badge badge-warning badge-pill"
                   id="NumerosCancion"
@@ -192,7 +203,8 @@
           <tbody>
             <tr>
               <td class="d-flex justify-content-between align-items-center">
-                <a href="Album.html" class="text-light" id="Chart-Albums"></a
+                <a href="Album.html" class="text-light" id="Chart-Albums"
+                  >hola</a
                 ><span class="badge badge-danger badge-pill">1</span>
               </td>
             </tr>
