@@ -8,16 +8,16 @@ window.onload = function () {
       var listaCanciones = document.querySelector("#listaCanciones");
       var contenidoCanciones = "";
       for (let i = 0; i < resultado.tracks.data.length; i++) {
-        console.log(resultado.tracks.data[i].title);
+        var canciones1 = resultado.tracks.data[i];
         contenidoCanciones +=
           '<tr> <td class="d-flex justify-content-between align-items-center">';
         contenidoCanciones +=
           '<a href="Cancion.html" class="text-light" >' +
-          resultado.tracks.data[i].title +
+          canciones1.title +
           "</a>";
         contenidoCanciones +=
           '<span class="badge badge-warning badge-pill" >' +
-          resultado.tracks.data[i].position +
+          canciones1.position +
           "</span>";
         contenidoCanciones += "</td> </tr>";
       }
@@ -26,15 +26,14 @@ window.onload = function () {
       var listaAlbumes = document.querySelector("#listaAlbumes");
       var contenidoAlbumes = "";
       for (let i = 0; i < resultado.albums.data.length; i++) {
+        var albums1 = resultado.albums.data[i];
         contenidoAlbumes +=
           '<tr> <td class="d-flex justify-content-between align-items-center">';
         contenidoAlbumes +=
-          '<a href="Album.html" class="text-light" >' +
-          resultado.albums.data[i].title +
-          "</a>";
+          '<a href="Album.html" class="text-light" >' + albums1.title + "</a>";
         contenidoAlbumes +=
           '<span class="badge badge-danger badge-pill" >' +
-          resultado.albums.data[i].position +
+          albums1.position +
           "</span>";
         contenidoAlbumes += "</td> </tr>";
       }
@@ -43,15 +42,16 @@ window.onload = function () {
       var listaArtista = document.querySelector("#listaArtista");
       var contenidoArtista = "";
       for (let i = 0; i < resultado.artists.data.length; i++) {
+        var artista1 = resultado.artists.data[i];
         contenidoArtista +=
           '<tr> <td class="d-flex justify-content-between align-items-center">';
         contenidoArtista +=
           '<a href="Artista.html" class="text-light" >' +
-          resultado.artists.data[i].name +
+          artista1.name +
           "</a>";
         contenidoArtista +=
           '<span class="badge badge-primary badge-pill" >' +
-          resultado.artists.data[i].position +
+          artista1.position +
           "</span>";
         contenidoArtista += "</td> </tr>";
       }
