@@ -12,7 +12,9 @@ window.onload = function () {
         contenidoCanciones +=
           '<tr> <td class="d-flex justify-content-between align-items-center">';
         contenidoCanciones +=
-          '<a href="Cancion.html" class="text-light" >' +
+          '<a href="Cancion.html?id=' +
+          canciones1.id +
+          '" class="text-light" >' +
           canciones1.title +
           "</a>";
         contenidoCanciones +=
@@ -30,7 +32,11 @@ window.onload = function () {
         contenidoAlbumes +=
           '<tr> <td class="d-flex justify-content-between align-items-center">';
         contenidoAlbumes +=
-          '<a href="Album.html" class="text-light" >' + albums1.title + "</a>";
+          '<a href="Album.html?id=' +
+          albums1.id +
+          '" class="text-light" >' +
+          albums1.title +
+          "</a>";
         contenidoAlbumes +=
           '<span class="badge badge-danger badge-pill" >' +
           albums1.position +
@@ -46,7 +52,9 @@ window.onload = function () {
         contenidoArtista +=
           '<tr> <td class="d-flex justify-content-between align-items-center">';
         contenidoArtista +=
-          '<a href="Artista.html" class="text-light" >' +
+          '<a href="Artista.html?id=' +
+          artista1 +
+          '" class="text-light" >' +
           artista1.name +
           "</a>";
         contenidoArtista +=
