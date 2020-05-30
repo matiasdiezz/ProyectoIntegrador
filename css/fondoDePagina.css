@@ -4,6 +4,12 @@ body {
   font-family: "Ropa Sans", sans-serif;
 }
 
+/* Font del carrouswel */
+.carousel-caption {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: bolder;
+}
+
 /* Nav bar */
 .nav-bar {
   width: 100%;
