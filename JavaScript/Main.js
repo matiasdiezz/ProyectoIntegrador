@@ -54,7 +54,7 @@ window.onload = function () {
           '<tr> <td class="d-flex justify-content-between align-items-center">';
         contenidoArtista +=
           '<a href="Artista.html?id=' +
-          artista1 +
+          artista1.id +
           '" class="text-light" >' +
           artista1.name +
           "</a>";
