@@ -1,4 +1,5 @@
 window.onload = function () {
+  // charts
   fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart")
     .then(function (response) {
       return response.json();
@@ -68,5 +69,18 @@ window.onload = function () {
     .catch(function (error) {
       console.log("Error: " + error);
     });
+  // Busqueda
+  var queryString = document.location.search.substring(0);
+  var queryStringObj = new URLSearchParams(queryString);
+
+  let holacomoestas = queryStringObj.get("id");
+  fetch(
+    "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=" +
+      Busqueda
+  )
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (resultado) {});
   // NO BORRAR
 };
