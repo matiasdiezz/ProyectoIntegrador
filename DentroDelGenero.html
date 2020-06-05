@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- js -->
-    <script src="JavaScript/Main.js"></script>
+
     <title>Home</title>
     <!-- Bootstrap CSS -->
     <link
@@ -40,8 +40,8 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
+    <script src="JavaScript/CadaGenero.js"></script>
     <!-- Css -->
-
     <link rel="stylesheet" href="css/fondoDePagina.css" />
   </head>
   <body>
@@ -120,7 +120,13 @@
         </form>
       </div>
     </nav>
-
+    <!-- Cuerpo -->
+    <div class="mt-3 border border-light rounded m-3">
+      <div
+        class="d-flex justify-content-around flex-wrap"
+        id="listaDeGeneros"
+      ></div>
+    </div>
     <!-- footer -->
     <div
       class="card-footer d-flex bg-light align-items-center m-3 border-warning rounded"
