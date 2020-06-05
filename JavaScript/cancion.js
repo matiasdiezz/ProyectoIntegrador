@@ -1,4 +1,7 @@
 window.onload = function () {
+  $(function () {
+    $('[data-toggle="popover"]').popover();
+  });
   var queryString = document.location.search.substring(0);
   var queryStringObj = new URLSearchParams(queryString);
 
@@ -18,17 +21,9 @@ window.onload = function () {
       var Canciones = "";
       // canción
       Canciones +=
-        '<img src="' +
-        resultado.album.cover_big +
-        '" class="rounded img-fluid img-thumbnail bg-warning shadow-lg" style="width: 300px;" alt="Foto del album"/>';
-      Canciones += '<div class="aling-items-center">';
-      Canciones +=
-        '<h1 class="text-light m-3 rounded">' + resultado.title + "</h1>";
-      Canciones +=
-        '<h3 type = "button" class="text-black m-3 bg-warning rounded">' +
-        resultado.artist.name +
-        "</h3>" +
-        "</div>";
+        '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=007FEB&layout=dark&size=medium&type=tracks&id=' +
+        holacomoestas +
+        '&app_id=1" width="300" height="300"></iframe>';
       console.log(resultado.preview);
       CuerpoCancion.innerHTML = Canciones;
     });
