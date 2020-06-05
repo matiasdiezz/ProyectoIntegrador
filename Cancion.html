@@ -107,12 +107,17 @@
             </a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <form
+          class="form-inline my-2 my-lg-0"
+          action="PaginaBusqueda.html"
+          method="get"
+        >
           <input
             class="form-control mr-sm-2"
             type="search"
             placeholder="Search"
             aria-label="Search"
+            name="q"
           />
           <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">
             Buscar
@@ -121,12 +126,14 @@
       </div>
     </nav>
     <!-- Canción -->
-    <div class="text-center" id="Canciones"></div>
+    <div class="d-flex justify-content-center">
+      <div class="text-center col-lg-6 col-12 col-md-8" id="Canciones"></div>
+    </div>
     <!-- botones -->
     <div class="col-12 font-weight-bolder text-center" style="font-size: 50px;">
       <a href=""><i class="fas fa-fast-backward text-warning"></i></a>
       <a href=""><i class="far fa-play-circle text-warning"></i></a>
-      <a href=""><i class="far fa-pause-circle text-warning"></i></a>
+      <a href=""><i class="far fa-pause-circle text-warning d-none"></i></a>
       <a href=""><i class="fas fa-fast-forward text-warning"></i></a>
     </div>
     <!-- Footer -->

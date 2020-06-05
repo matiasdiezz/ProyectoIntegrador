@@ -18,10 +18,10 @@ window.onload = function () {
       var contenidoDeGeneros = "";
       for (let i = 0; i < resultado.data.length; i++) {
         contenidoDeGeneros +=
-          '<div class="card col-lg-2 col-sm-5 bg-primary align-items-center m-3 border border-black">';
+          '<div class="card col-lg-2 col-sm-5 bg-primary align-items-center m-3 border border-light">';
         contenidoDeGeneros +=
           '<img class="card-img-top rounded mt-3 border border-warning" src="' +
-          resultado.data[i].picture +
+          resultado.data[i].picture_big +
           '" alt="Card image"/>';
         contenidoDeGeneros +=
           '<div class="card-body">' +

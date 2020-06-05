@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/albumYArtista.css" />
+    <title>Buscar</title>
     <link rel="stylesheet" href="css/fondoDePagina.css" />
     <!-- scripts -->
     <script
@@ -32,10 +31,10 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <script src="JavaScript/Artista.js"></script>
+    <script src="JavaScript/PaginaBusqueda.js"></script>
   </head>
   <body>
-    <!-- header -->
+    <!-- Nav bar -->
     <nav
       class="navbar navbar-expand-lg navbar-light bg-light m-3 rounded sticky-top"
     >
@@ -115,35 +114,38 @@
         </form>
       </div>
     </nav>
+    <!-- Container de busquedas -->
+    <nav
+      id="navbar-example2"
+      class="navbar navbar-warning bg-warning m-3 rounded d-flex justify-content-center"
     >
-    <!-- Container -->
-    <div class="container row d-inline-flex justify-content-center col-12">
-      <!-- Lista de mas escuchados -->
-      <div class="col-4 bg-primary m-3 pt-3 rounded" id="holacomoestas">
-        <table class="table table-dark table-striped table-hover">
-          <thead>
-            <tr>
-              <th class="text-primary">Top 10 Artistas</th>
-            </tr>
-          </thead>
-          <tbody id="listaArtista"></tbody>
-        </table>
-      </div>
-      <!-- Detalle del artista -->
+      <ul class="nav nav-pills text-center">
+        <li class="nav-item">
+          <a class="nav-link text-body" href="#Caniones">Canciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-body" href="#Artistas">Artistas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-body" href="#Albums">Albums</a>
+        </li>
+      </ul>
+    </nav>
+    <div
+      data-spy="scroll"
+      data-target="#navbar-example2"
+      data-offset="0"
+      class="m-3 text-center"
+    >
+      <h4 id="Canciones" class="text-light">Canciones</h4>
       <div
-        class="row d-flex p-3 bg-primary m-3 rounded col-lg-7 col-sm-12"
-        id="sepica"
-      >
-        <div class="col-7 text-right" id="Descripcion"></div>
-        <div id="Foto" class="col-4"></div>
-        <div class="col-12 bg-primary pt-3 rounded shadow-lg">
-          <table class="table table-dark table-striped table-hover">
-            <tbody>
-              <tr id="chart"></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+        id="BCanciones"
+        class="d-flex justify-content-around flex-wrap"
+      ></div>
+      <h4 id="Artistas" class="text-light">Artistas</h4>
+      <div id="BArtistas" class="d-flex justify-content-around flex-wrap"></div>
+      <h4 id="Albums" class="text-light">Albums</h4>
+      <div id="BAlbums" class="d-flex justify-content-around flex-wrap"></div>
     </div>
     <!-- Footer -->
     <div
@@ -153,11 +155,13 @@
         <h5 class="text-body">Corradi, Martin, Diez</h5>
       </div>
       <div class="ml-auto">
-        <img
-          src="images/Webp.net-resizeimage.png"
-          alt=""
-          class="img-fixed float-left"
-        />
+        <a target="_blank" href="https://www.deezer.com/es/">
+          <img
+            src="images/Webp.net-resizeimage.png"
+            alt=""
+            class="img-fixed float-left"
+          />
+        </a>
       </div>
     </div>
   </body>

@@ -20,7 +20,7 @@ window.onload = function () {
       var cuerpoAlbum = document.querySelector("#Descripcion");
       var cosasAlbum = '<h1 class="m-3">' + resultado.name + "</h1>";
       cosasAlbum +=
-        '<h5 class="m-3 bg-light rounded text-center"> Fans counter: ' +
+        '<h5 class="m-3 bg-light rounded text-center" id="Contador""> Fans counter: ' +
         resultado.nb_fan +
         "</h5 >";
       cuerpoAlbum.innerHTML = cosasAlbum;

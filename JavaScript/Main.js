@@ -65,22 +65,20 @@ window.onload = function () {
         contenidoArtista += "</td> </tr>";
       }
       listaArtista.innerHTML = contenidoArtista;
+      document.querySelector("#fotoAlbum").innerHTML =
+        '<img src = "' +
+        resultado.albums.data[1].cover_xl +
+        '" class="d-block w-100" alt = "..."/>';
+      document.querySelector("#fotoArtista").innerHTML =
+        '<img src = "' +
+        resultado.artists.data[1].picture_xl +
+        '" class="d-block w-100" alt = "..."/>';
+      document.querySelector("#fotoTracks").innerHTML =
+        '<img src = "' +
+        resultado.tracks.data[1].album.cover_xl +
+        '" class="d-block w-100" alt = "..."/>';
     })
     .catch(function (error) {
       console.log("Error: " + error);
     });
-  // Busqueda
-  var queryString = document.location.search.substring(0);
-  var queryStringObj = new URLSearchParams(queryString);
-
-  let holacomoestas = queryStringObj.get("id");
-  fetch(
-    "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=" +
-      Busqueda
-  )
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (resultado) {});
-  // NO BORRAR
 };

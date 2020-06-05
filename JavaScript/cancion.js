@@ -28,9 +28,7 @@ window.onload = function () {
         '<h3 type = "button" class="text-black m-3 bg-warning rounded">' +
         resultado.artist.name +
         "</h3>" +
-        '<audio controls> < source src = "' +
-        holacomoestas.link +
-        '" type = "audio/mpeg" ></audio></div>"';
+        "</div>";
       console.log(resultado.preview);
       CuerpoCancion.innerHTML = Canciones;
     });
