@@ -1,11 +1,12 @@
 window.onload = function () {
-  // charts
+  // charts 
   fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart")
     .then(function (response) {
       return response.json();
     })
     .then(function (resultado) {
       console.log(resultado);
+      //Canciones
       var listaCanciones = document.querySelector("#listaCanciones");
       var contenidoCanciones = "";
       for (let i = 0; i < resultado.tracks.data.length; i++) {

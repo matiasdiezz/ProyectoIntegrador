@@ -1,12 +1,11 @@
 window.onload = function () {
-  var queryString = document.location.search.substring(0);
+  var queryString = location.search;
   var queryStringObj = new URLSearchParams(queryString);
-
-  var holacomoestas = queryStringObj.get("q");
+  var BusquedaId = queryStringObj.get("q");
   //caniones
   fetch(
     "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/track?q=" +
-      holacomoestas
+      BusquedaId
   )
     .then(function (response) {
       return response.json();
@@ -37,7 +36,7 @@ window.onload = function () {
   //Artista
   fetch(
     "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/artist?q=" +
-      holacomoestas
+      BusquedaId
   )
     .then(function (response) {
       return response.json();
@@ -68,7 +67,7 @@ window.onload = function () {
   //Albums
   fetch(
     "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/album?q=" +
-      holacomoestas
+      BusquedaId
   )
     .then(function (response) {
       return response.json();
