@@ -1,17 +1,21 @@
 window.onload = function () {
+  //Agarro una parte de la URL y la convierto en un objeto
   var queryString = document.location.search.substring(0);
   var queryStringObj = new URLSearchParams(queryString);
-  let holacomoestas = queryStringObj.get("id");
+  let idAlbum = queryStringObj.get("id");
   //Cuerpo
+  //Hago un fetch en la API y le agrego el id
   fetch(
     "https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/" +
-      holacomoestas
+      idAlbum
   )
     .then(function (response) {
       return response.json();
     })
     .then(function (resultado) {
+      // le insterto el html al div
       console.log(resultado);
+      //Elijo el Div con el id "Foto"
       var fotoAlbum = document.querySelector("#Foto");
       fotoAlbum.innerHTML =
         '<img src="' +
@@ -22,6 +26,9 @@ window.onload = function () {
       cosasAlbum += '<h3 class="m-3">' + resultado.artist.name + "</h3 >";
       cosasAlbum += '<h5 class="m-3">' + resultado.release_date + "</h5>";
       cuerpoAlbum.innerHTML = cosasAlbum;
+      //Cambiar de segundos a minutos
+
+      //Agrego Las canciones del album
       var chartiano = document.querySelector("#chart");
       var chartt = "";
       for (let i = 0; i < resultado.tracks.data.length; i++) {
@@ -40,10 +47,11 @@ window.onload = function () {
           " segundos</span>" +
           " </td>";
         console.log(chartiano);
+        //Le inserto el html
         chartiano.innerHTML = chartt;
       }
     });
-  //chart
+  //Agrego un chart si la pantalla es xl
   fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart")
     .then(function (response) {
       return response.json();
@@ -72,21 +80,3 @@ window.onload = function () {
       listaAlbumes.innerHTML = contenidoAlbumes;
     });
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

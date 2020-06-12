@@ -33,7 +33,7 @@ window.onload = function () {
       console.log(resultado.preview);
       CuerpoCancion.innerHTML = Canciones;
     });
-  
+
   //recuperar datos del storage
 
   let BuscarPlaylist = localStorage.getItem("playlist");
@@ -52,6 +52,7 @@ window.onload = function () {
     document.querySelector("#BotonAgregar").innerHTML =
       '<button type = "button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Uh! Que bajon que la sacaste compa">' +
       '<i class="fas fa-eraser" style="font-size: 35px;"></i>' +
+      "Borrar de la playlist" +
       "</button>";
   }
 
@@ -69,6 +70,7 @@ window.onload = function () {
       document.querySelector("#BotonAgregar").innerHTML =
         '<button type = "button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Kinga, ya esta en tu playlist este temon!">' +
         '<i class="fab fa-creative-commons-sampling-plus" style = "font-size: 35px;"></i >' +
+        "Agregar a playlist" +
         "</button>";
       console.log(playlist);
     } else {
@@ -77,6 +79,7 @@ window.onload = function () {
       document.querySelector("#BotonAgregar").innerHTML =
         '<button type = "button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Uh! Que bajon que la sacaste compa">' +
         '<i class="fas fa-eraser" style="font-size: 35px;"></i>' +
+        "Borrar de la playlist" +
         "</button>";
     }
 
