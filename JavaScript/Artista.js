@@ -2,12 +2,12 @@ window.onload = function () {
   //Convierte una parte de la URL en un elemento
   var queryString = document.location.search.substring(0);
   var queryStringObj = new URLSearchParams(queryString);
-  let holacomoestas = queryStringObj.get("id");
+  let idArtista = queryStringObj.get("id");
   //Cuerpo
   //Hago un fetch y le agrego el ID
   fetch(
     "https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/" +
-    holacomoestas
+      idArtista
   )
     .then(function (response) {
       return response.json();
@@ -31,7 +31,7 @@ window.onload = function () {
   //lsita de canciones
   fetch(
     "https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/" +
-      holacomoestas +
+      idArtista +
       "/top"
   )
     .then(function (response) {

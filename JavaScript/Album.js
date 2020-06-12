@@ -26,7 +26,6 @@ window.onload = function () {
       cosasAlbum += '<h3 class="m-3">' + resultado.artist.name + "</h3 >";
       cosasAlbum += '<h5 class="m-3">' + resultado.release_date + "</h5>";
       cuerpoAlbum.innerHTML = cosasAlbum;
-      //Cambiar de segundos a minutos
 
       //Agrego Las canciones del album
       var chartiano = document.querySelector("#chart");
