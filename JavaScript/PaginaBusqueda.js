@@ -1,8 +1,9 @@
 window.onload = function () {
-  var queryString = location.search;
-  var queryStringObj = new URLSearchParams(queryString);
-  var BusquedaId = queryStringObj.get("q");
-  //caniones
+  //Convierto la data de la URL a una variable
+  let queryString = location.search;
+  let queryStringObj = new URLSearchParams(queryString);
+  let BusquedaId = queryStringObj.get("q");
+  //Hago un fetch de las canciones 
   fetch(
     "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/track?q=" +
       BusquedaId
@@ -12,10 +13,12 @@ window.onload = function () {
     })
     .then(function (resultado) {
       console.log(resultado);
+      //Creo variable de la lista de canciones (Solo muestro 10)
       var ListaCanciones = document.querySelector("#BCanciones");
       var contenidoCanciones = "";
       for (let i = 0; i < 10; i++) {
         const element = resultado.data[i];
+        //Agrego el HTML
         contenidoCanciones +=
           '<div class="card col-lg-2 col-sm-5 bg-warning align-items-center m-3 border border-light">';
         contenidoCanciones +=
@@ -34,6 +37,7 @@ window.onload = function () {
       ListaCanciones.innerHTML = contenidoCanciones;
     });
   //Artista
+  //Hago lo mismo con artista
   fetch(
     "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/artist?q=" +
       BusquedaId
@@ -65,6 +69,7 @@ window.onload = function () {
       ListaArtist.innerHTML = contenidoArtist;
     });
   //Albums
+  //Lo mismo con albums
   fetch(
     "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/album?q=" +
       BusquedaId

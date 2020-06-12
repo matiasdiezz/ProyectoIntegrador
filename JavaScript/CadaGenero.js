@@ -1,12 +1,14 @@
 window.onload = function () {
+  //Convierto una parte de la URL en un elemento
   var queryString = document.location.search.substring(0);
+//Le metes el querystring 
   var queryStringObj = new URLSearchParams(queryString);
-
-  var holacomoestas = queryStringObj.get("id");
-
+//Creas variable con lo que te trajo
+  let idGeneros = queryStringObj.get("id");
+//Hago un fetch y le agrego el ID de generos
   fetch(
     "https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/" +
-      holacomoestas +
+      idGeneros +
       "/artists"
   )
     .then(function (response) {
@@ -14,8 +16,11 @@ window.onload = function () {
     })
     .then(function (resultado) {
       console.log(resultado);
+      //Traigo el div con ese id
       var listaDeGeneros = document.querySelector("#listaDeGeneros");
       var contenidoDeGeneros = "";
+
+      //Trae los artistas de la API y los muestra y le agrega contenido
       for (let i = 0; i < resultado.data.length; i++) {
         contenidoDeGeneros +=
           '<div class="card col-lg-2 col-sm-5 bg-primary align-items-center m-3 border border-light">';
@@ -35,6 +40,7 @@ window.onload = function () {
       listaDeGeneros.innerHTML = contenidoDeGeneros;
       console.log(listaDeGeneros);
     })
+//Si hay erros lo muestra en consola
     .catch(function (error) {
       console.log("Error: " + error);
     });

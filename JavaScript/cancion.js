@@ -1,13 +1,19 @@
 window.onload = function () {
   $(function () {
+    //Aparecen los pops over
     $('[data-toggle="popover"]').popover();
   });
+  //Convierto una parte de la URL a un elemento
   var queryString = document.location.search.substring(0);
+
   var queryStringObj = new URLSearchParams(queryString);
 
   let idTrack = queryStringObj.get("id");
 
   console.log(idTrack);
+
+  //Hago un fetch y le agrego el ID
+
   fetch(
     "https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/" +
       idTrack
@@ -27,8 +33,8 @@ window.onload = function () {
       console.log(resultado.preview);
       CuerpoCancion.innerHTML = Canciones;
     });
-  //Pasos para agregar temas a una playlist
-  //Paso 1: recuperar datos del storage
+  
+  //recuperar datos del storage
 
   let BuscarPlaylist = localStorage.getItem("playlist");
 
@@ -49,7 +55,7 @@ window.onload = function () {
       "</button>";
   }
 
-  //Paso 2: agregar un track a la playlist.
+  // agregar un track a la playlist.
   let agregar = document.querySelector("#BotonAgregar");
 
   agregar.addEventListener("click", function (e) {
@@ -74,7 +80,7 @@ window.onload = function () {
         "</button>";
     }
 
-    //Paso 3 guardar lista en localStorage
+    //guardar lista en localStorage
     let playlistParaStorage = JSON.stringify(playlist);
     localStorage.setItem("playlist", playlistParaStorage);
     console.log(localStorage);

@@ -1,11 +1,13 @@
 window.onload = function () {
+  //Convierte una parte de la URL en un elemento
   var queryString = document.location.search.substring(0);
   var queryStringObj = new URLSearchParams(queryString);
   let holacomoestas = queryStringObj.get("id");
   //Cuerpo
+  //Hago un fetch y le agrego el ID
   fetch(
     "https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/" +
-      holacomoestas
+    holacomoestas
   )
     .then(function (response) {
       return response.json();
@@ -13,6 +15,7 @@ window.onload = function () {
     .then(function (resultado) {
       console.log(resultado);
       var fotoAlbum = document.querySelector("#Foto");
+      //Agrego el HTML a cada elemento
       fotoAlbum.innerHTML =
         '<img src="' +
         resultado.picture_big +

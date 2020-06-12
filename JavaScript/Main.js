@@ -1,5 +1,6 @@
 window.onload = function () {
-  // charts 
+  //Charts 
+  //Traemos la API de los charts
   fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart")
     .then(function (response) {
       return response.json();
@@ -7,10 +8,13 @@ window.onload = function () {
     .then(function (resultado) {
       console.log(resultado);
       //Canciones
+      //Creo el top 10 canciones
+      //Selecciono el div y le agrego el contenido
       var listaCanciones = document.querySelector("#listaCanciones");
       var contenidoCanciones = "";
       for (let i = 0; i < resultado.tracks.data.length; i++) {
         var canciones1 = resultado.tracks.data[i];
+        //Agrego HTML al chart
         contenidoCanciones +=
           '<tr> <td class="d-flex justify-content-between align-items-center">';
         contenidoCanciones +=
@@ -25,8 +29,12 @@ window.onload = function () {
           "</span>";
         contenidoCanciones += "</td> </tr>";
       }
+      //Le inserto el HTML
       listaCanciones.innerHTML = contenidoCanciones;
-      // aca son los albumes
+
+      // Aca son los albumes
+      //Lo mismo con los albums
+
       var listaAlbumes = document.querySelector("#listaAlbumes");
       var contenidoAlbumes = "";
       for (let i = 0; i < resultado.albums.data.length; i++) {
@@ -47,6 +55,7 @@ window.onload = function () {
       }
       listaAlbumes.innerHTML = contenidoAlbumes;
       // aca va el de artista
+      //Lo mismo con artista AKA LIL PROGRAM
       var listaArtista = document.querySelector("#listaArtista");
       var contenidoArtista = "";
       for (let i = 0; i < resultado.artists.data.length; i++) {
@@ -65,20 +74,27 @@ window.onload = function () {
           "</span>";
         contenidoArtista += "</td> </tr>";
       }
+
       listaArtista.innerHTML = contenidoArtista;
+      //Carrousel
+      //Se busca "el mejor" de cada categoria y se agrega
+      //Album
       document.querySelector("#fotoAlbum").innerHTML =
         '<img src = "' +
         resultado.albums.data[1].cover_xl +
         '" class="d-block w-100" alt = "..."/>';
+        //Artista 
       document.querySelector("#fotoArtista").innerHTML =
         '<img src = "' +
         resultado.artists.data[1].picture_xl +
         '" class="d-block w-100" alt = "..."/>';
+        //Track
       document.querySelector("#fotoTracks").innerHTML =
         '<img src = "' +
         resultado.tracks.data[1].album.cover_xl +
         '" class="d-block w-100" alt = "..."/>';
     })
+    //Muestra si hay un error
     .catch(function (error) {
       console.log("Error: " + error);
     });

@@ -1,9 +1,13 @@
 // Playlist
 window.onload = function () {
   //Recupero el repositorio local
+ 
   let recuperoStorage = localStorage.getItem("playlist");
+  
   //Lo convierto en JSON
+  
   let playlist = JSON.parse(recuperoStorage);
+  
   //Selcciono la playlist en el HTML
 
   let miPlaylist = document.querySelector("#MiPlaylist");
