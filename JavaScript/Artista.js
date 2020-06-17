@@ -43,6 +43,13 @@ window.onload = function () {
       var chartt = "";
       for (let i = 0; i < resultado.data.length; i++) {
         const element = resultado.data[i];
+        //Convierto de segundos a minutos
+        var mind = element.duration % (60 * 60);
+        var minutes = Math.floor(mind / 60);
+        var secd = mind % 60;
+        var seconds = Math.ceil(secd);
+        //agrego datos al artista
+
         chartt +=
           '<td class="d-flex justify-content-between align-items-center">';
         chartt +=
@@ -53,9 +60,12 @@ window.onload = function () {
           "</a>";
         chartt +=
           '<span class="badge badge-primary badge-pill">' +
-          element.duration +
+          minutes +
+          ":" +
+          seconds +
           " segundos</span>" +
           " </td>";
+
         console.log(chartiano);
         chartiano.innerHTML = chartt;
       }
