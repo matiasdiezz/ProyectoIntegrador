@@ -21,6 +21,7 @@ window.onload = function () {
           '" alt="Card image"/>';
         contenidoDeGeneros +=
           '<div class="card-body">' +
+          //al href le agrego el id para agregarlo a la url
           '<a href="DentroDelGenero.html?id=' +
           resultado.data[i].id +
           '" class="btn btn-warning col-12">' +

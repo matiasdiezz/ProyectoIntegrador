@@ -1,12 +1,39 @@
 window.onload = function () {
-  //Charts 
+  //Charts
   //Traemos la API de los charts
   fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart")
     .then(function (response) {
       return response.json();
     })
     .then(function (resultado) {
+      //Carrousel
+      //Se busca "el mejor" de cada categoria y se agrega
+      //Album
+      document.querySelector("#fotoAlbum").innerHTML =
+        '<div><img src="' +
+        resultado.albums.data[1].cover_xl +
+        '"class="d-block w-100 bg-danger p-3" alt="..."/></div><div class="carousel-caption"> <h3 class="font-weight-bold">El Mejor Album</h3> <p>' +
+        resultado.albums.data[1].title +
+        " es el 1" +
+        "</p> </div>";
+      //Artista
+      document.querySelector("#fotoArtista").innerHTML =
+        '<div><img src="' +
+        resultado.artists.data[1].picture_xl +
+        '"class="d-block w-100 bg-primary p-3" alt="..."/></div><div class="carousel-caption"> <h3 class="font-weight-bold">El Mejor Artista</h3> <p>' +
+        resultado.artists.data[1].name +
+        " es el 1" +
+        "</p> </div>";
+      //Track
+      document.querySelector("#fotoTracks").innerHTML =
+        '<div><img src="' +
+        resultado.tracks.data[1].album.cover_xl +
+        '"class="d-block w-100 bg-warning p-3" alt="..."/></div><div class="carousel-caption"> <h3 class="font-weight-bold">La mejor canción</h3> <p>' +
+        resultado.tracks.data[1].title +
+        " es el 1" +
+        "</p> </div>";
       console.log(resultado);
+
       //Canciones
       //Creo el top 10 canciones
       //Selecciono el div y le agrego el contenido
@@ -18,6 +45,7 @@ window.onload = function () {
         contenidoCanciones +=
           '<tr> <td class="d-flex justify-content-between align-items-center">';
         contenidoCanciones +=
+          //Agrego el id a la url para hacer display
           '<a href="Cancion.html?id=' +
           canciones1.id +
           '" class="text-light" >' +
@@ -55,7 +83,7 @@ window.onload = function () {
       }
       listaAlbumes.innerHTML = contenidoAlbumes;
       // aca va el de artista
-      //Lo mismo con artista AKA LIL PROGRAM
+      //Lo mismo con artista AKA LIL PROGRAM$$$$$$
       var listaArtista = document.querySelector("#listaArtista");
       var contenidoArtista = "";
       for (let i = 0; i < resultado.artists.data.length; i++) {
@@ -76,23 +104,6 @@ window.onload = function () {
       }
 
       listaArtista.innerHTML = contenidoArtista;
-      //Carrousel
-      //Se busca "el mejor" de cada categoria y se agrega
-      //Album
-      document.querySelector("#fotoAlbum").innerHTML =
-        '<img src = "' +
-        resultado.albums.data[1].cover_xl +
-        '" class="d-block w-100" alt = "..."/>';
-        //Artista 
-      document.querySelector("#fotoArtista").innerHTML =
-        '<img src = "' +
-        resultado.artists.data[1].picture_xl +
-        '" class="d-block w-100" alt = "..."/>';
-        //Track
-      document.querySelector("#fotoTracks").innerHTML =
-        '<img src = "' +
-        resultado.tracks.data[1].album.cover_xl +
-        '" class="d-block w-100" alt = "..."/>';
     })
     //Muestra si hay un error
     .catch(function (error) {

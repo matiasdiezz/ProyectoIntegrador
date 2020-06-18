@@ -22,9 +22,18 @@ window.onload = function () {
         resultado.cover_big +
         '" class="img-thumbnail float-right" style="height: 200px;"/>';
       var cuerpoAlbum = document.querySelector("#Descripcion");
-      var cosasAlbum = '<h1 class="m-3">' + resultado.title + "</h1>";
-      cosasAlbum += '<h3 class="m-3">' + resultado.artist.name + "</h3 >";
-      cosasAlbum += '<h5 class="m-3">' + resultado.release_date + "</h5>";
+      var cosasAlbum =
+        '<h1 class="m-3 bg-dark text-light rounded">' +
+        resultado.title +
+        "</h1>";
+      cosasAlbum +=
+        '<h3 class="m-3 bg-dark text-light rounded">' +
+        resultado.artist.name +
+        "</h3 >";
+      cosasAlbum +=
+        '<h5 class="m-3 bg-dark text-light rounded">' +
+        resultado.release_date +
+        "</h5>";
       cuerpoAlbum.innerHTML = cosasAlbum;
 
       //Agrego Las canciones del album
@@ -32,6 +41,11 @@ window.onload = function () {
       var chartt = "";
       for (let i = 0; i < resultado.tracks.data.length; i++) {
         const element = resultado.tracks.data[i];
+        //Convierto de segundos a minutos
+        var mind = element.duration % (60 * 60);
+        var minutes = Math.floor(mind / 60);
+        var secd = mind % 60;
+        var seconds = Math.ceil(secd);
         chartt +=
           '<td class="d-flex justify-content-between align-items-center">';
         chartt +=
@@ -42,8 +56,10 @@ window.onload = function () {
           "</a>";
         chartt +=
           '<span class="badge badge-danger badge-pill">' +
-          element.duration +
-          " segundos</span>" +
+          minutes +
+          ":" +
+          seconds +
+          " Mins</span>" +
           " </td>";
         console.log(chartiano);
         //Le inserto el html

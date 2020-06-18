@@ -3,7 +3,7 @@ window.onload = function () {
     //Aparecen los pops over
     $('[data-toggle="popover"]').popover();
   });
-  //Convierto una parte de la URL a un elemento
+  //Convierto una parte de la URL a un elemento llamado idTrack
   var queryString = document.location.search.substring(0);
 
   var queryStringObj = new URLSearchParams(queryString);
@@ -24,12 +24,10 @@ window.onload = function () {
     .then(function (resultado) {
       console.log(resultado);
       var CuerpoCancion = document.querySelector("#Canciones");
-      var Canciones = "";
-      // canción
-      Canciones +=
+      var Canciones =
         '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=007FEB&layout=dark&size=medium&type=tracks&id=' +
         idTrack +
-        '&app_id=1" width="300" height="300"></iframe>';
+        '&app_id=1" width="300" height="300" class="bg-warning p-3 rounded"></iframe>';
       console.log(resultado.preview);
       CuerpoCancion.innerHTML = Canciones;
     });

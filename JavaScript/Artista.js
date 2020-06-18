@@ -21,14 +21,19 @@ window.onload = function () {
         resultado.picture_big +
         '" class="img-thumbnail float-right" style="height: 200px;"/>';
       var cuerpoAlbum = document.querySelector("#Descripcion");
-      var cosasAlbum = '<h1 class="m-3">' + resultado.name + "</h1>";
+      var cosasAlbum =
+        '<h1 class="bg-dark m-3 text-light rounded">' +
+        resultado.name +
+        "</h1>";
       cosasAlbum +=
-        '<h5 class="m-3 bg-light rounded text-center" id="Contador""> Fans counter: ' +
+        '<h5 class="bg-dark m-3 text-light rounded" id="Contador""> Fans counter: ' +
         resultado.nb_fan +
-        "</h5 >";
+        '  <i class="fas fa-fire"></i>' +
+        "</h5>";
       cuerpoAlbum.innerHTML = cosasAlbum;
     });
-  //lsita de canciones
+
+  //top 5 de canciones
   fetch(
     "https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/" +
       idArtista +
@@ -63,7 +68,7 @@ window.onload = function () {
           minutes +
           ":" +
           seconds +
-          " segundos</span>" +
+          " Mins</span>" +
           " </td>";
 
         console.log(chartiano);
