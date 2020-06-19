@@ -75,7 +75,7 @@ window.onload = function () {
       //Agrego el id del track a la lista
       playlist.push(idTrack);
       document.querySelector("#BotonAgregar").innerHTML =
-        '<button type = "button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Uh! Que bajon que la sacaste compa">' +
+        '<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Uh! Que bajon que la sacaste compa">' +
         '<i class="fas fa-eraser" style="font-size: 35px;"></i>' +
         "Borrar de la playlist" +
         "</button>";
