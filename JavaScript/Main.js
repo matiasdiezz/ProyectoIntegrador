@@ -11,25 +11,25 @@ window.onload = function () {
       //Album
       document.querySelector("#fotoAlbum").innerHTML =
         '<div><img src="' +
-        resultado.albums.data[1].cover_xl +
+        resultado.albums.data[0].cover_xl +
         '"class="d-block w-100 bg-danger p-3" alt="..."/></div><div class="carousel-caption"> <h3 class="font-weight-bold">El Mejor Album</h3> <p>' +
-        resultado.albums.data[1].title +
+        resultado.albums.data[0].title +
         " es el 1" +
         "</p> </div>";
       //Artista
       document.querySelector("#fotoArtista").innerHTML =
         '<div><img src="' +
-        resultado.artists.data[1].picture_xl +
+        resultado.artists.data[0].picture_xl +
         '"class="d-block w-100 bg-primary p-3" alt="..."/></div><div class="carousel-caption"> <h3 class="font-weight-bold">El Mejor Artista</h3> <p>' +
-        resultado.artists.data[1].name +
+        resultado.artists.data[0].name +
         " es el 1" +
         "</p> </div>";
       //Track
       document.querySelector("#fotoTracks").innerHTML =
         '<div><img src="' +
-        resultado.tracks.data[1].album.cover_xl +
+        resultado.tracks.data[0].album.cover_xl +
         '"class="d-block w-100 bg-warning p-3" alt="..."/></div><div class="carousel-caption"> <h3 class="font-weight-bold">La mejor canción</h3> <p>' +
-        resultado.tracks.data[1].title +
+        resultado.tracks.data[0].title +
         " es el 1" +
         "</p> </div>";
       console.log(resultado);
