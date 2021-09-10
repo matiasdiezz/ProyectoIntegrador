@@ -15,7 +15,7 @@ window.onload = function () {
   //Hago un fetch y le agrego el ID
 
   fetch(
-    "https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/" +
+    "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/track/" +
       idTrack
   )
     .then(function (response) {

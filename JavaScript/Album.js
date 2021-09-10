@@ -6,7 +6,7 @@ window.onload = function () {
   //Cuerpo
   //Hago un fetch en la API y le agrego el id
   fetch(
-    "https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/" +
+    "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/album/" +
       idAlbum
   )
     .then(function (response) {

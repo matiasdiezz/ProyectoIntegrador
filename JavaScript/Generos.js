@@ -1,6 +1,6 @@
 window.onload = function () {
   //Traemos la API de los generos con un fetch
-  fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre")
+  fetch("https://thingproxy.freeboard.io/fetch/https://api.deezer.com/genre")
     .then(function (response) {
       return response.json();
     })

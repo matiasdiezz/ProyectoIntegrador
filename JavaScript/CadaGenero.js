@@ -7,7 +7,7 @@ window.onload = function () {
   let idGeneros = queryStringObj.get("id");
 //Hago un fetch y le agrego el ID de generos
   fetch(
-    "https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/" +
+    "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/genre/" +
       idGeneros +
       "/artists"
   )

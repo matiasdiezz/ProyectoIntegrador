@@ -27,7 +27,7 @@ window.onload = function () {
   //Traigo todas las canciones de la API con un fetch
   function mostrarTrack(idTrack) {
     fetch(
-      "https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/" +
+      "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/track/" +
         idTrack
     )
       .then(function (response) {

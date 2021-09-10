@@ -6,7 +6,7 @@ window.onload = function () {
   //Cuerpo
   //Hago un fetch y le agrego el ID
   fetch(
-    "https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/" +
+    "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/artist/" +
       idArtista
   )
     .then(function (response) {
@@ -35,7 +35,7 @@ window.onload = function () {
 
   //top 5 de canciones
   fetch(
-    "https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/" +
+    "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/artist/" +
       idArtista +
       "/top"
   )

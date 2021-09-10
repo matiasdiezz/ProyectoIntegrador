@@ -5,7 +5,7 @@ window.onload = function () {
   let BusquedaId = queryStringObj.get("q");
   //Hago un fetch de las canciones 
   fetch(
-    "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/track?q=" +
+    "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/search/track?q=" +
       BusquedaId
   )
     .then(function (response) {
@@ -39,7 +39,7 @@ window.onload = function () {
   //Artista
   //Hago lo mismo con artista
   fetch(
-    "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/artist?q=" +
+    "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/search/artist?q=" +
       BusquedaId
   )
     .then(function (response) {
